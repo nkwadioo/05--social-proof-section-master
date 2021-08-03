@@ -1,1 +1,81 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Spartan', sans-serif;
+  min-height: 100vh;
+}
+
+.wrapper {
+  padding-left: .6rem;
+  padding-right: .6rem;
+}
+
+.background {
+  width: 100%;
+  position: absolute;
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  z-index: -1;
+}
+
+.background img {
+  width: inherit;
+}
+
+.background img:last-child {
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+
+.background .desktop {
+  display: none;
+}
+
+header {
+  color: #502050;
+  text-align: center;
+}
+
+header h2 {
+  max-width: 11ch;
+  margin: auto;
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+}
+
+header p {
+  margin-bottom: 2rem;
+  font-size: 15px;
+}
+
+section.ratings .rating {
+  width: 100%;
+  background-color: #937b92;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+section.ratings .rating .stars {
+  display: block;
+  background-image: url(./../images/icon-star.svg);
+  background-repeat: space round;
+  width: 140px;
+  height: 22px;
+  margin: auto;
+  margin-bottom: 0.8rem;
+}
+
+section.ratings .rating p {
+  font-weight: 500;
+}
+/*# sourceMappingURL=style.css.map */

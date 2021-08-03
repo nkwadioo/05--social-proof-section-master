@@ -1,0 +1,80 @@
+$clr-Dark-Magenta: hsl(300, 43%, 22%);
+$clr-Pink: hsl(333, 80%, 67%);
+
+$clr-Grayish-Magenta: hsl(303, 10%, 53%);
+$clr-Light-Grayish-Magenta: hsl(300, 24%, 96%);
+$clr-White: hsl(0, 0%, 100%);
+
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Spartan', sans-serif;
+    min-height: 100vh;
+}
+
+.wrapper {
+    padding-left: .6rem;
+    padding-right: .6rem;
+}
+
+.background {
+    width: 100%;
+    position: absolute;
+    min-height: 100vh;
+    display: grid;
+    z-index: -1;
+    img {
+        width: inherit;
+        &:last-child {
+            align-self: end;
+        }
+    }
+    
+    .desktop {
+        display: none;
+    }
+}
+
+header {
+    color: $clr-Dark-Magenta;
+    text-align: center;
+    h2 {
+        max-width: 11ch;
+        margin: auto;
+        padding-top: 4rem;
+        padding-bottom: 1rem;
+    }
+
+    p {
+        margin-bottom: 2rem;
+        font-size: 15px;
+    }
+}
+section.ratings {
+    .rating {
+        width: 100%;
+        background-color: $clr-Grayish-Magenta;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 10px;
+        text-align: center;
+        .stars {
+            display: block;
+            background-image: url(./../images/icon-star.svg);
+            background-repeat: space round;
+            width: 140px;
+            height: 22px;
+            margin: auto;
+            margin-bottom: 0.8rem;
+        }
+        p {
+            font-weight: 500;
+        }
+    }
+}
