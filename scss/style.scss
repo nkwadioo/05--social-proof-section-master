@@ -5,7 +5,7 @@ $clr-Grayish-Magenta: hsl(303, 10%, 53%);
 $clr-Light-Grayish-Magenta: hsl(300, 24%, 96%);
 $clr-White: hsl(0, 0%, 100%);
 
-@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@200;400;500;700&display=swap');
 
 *, *::before, *::after {
     margin: 0;
@@ -16,6 +16,7 @@ $clr-White: hsl(0, 0%, 100%);
 body {
     font-family: 'Spartan', sans-serif;
     min-height: 100vh;
+    position: relative;
 }
 
 .wrapper {
@@ -26,7 +27,7 @@ body {
 .background {
     width: 100%;
     position: absolute;
-    min-height: 100vh;
+    height: 100%;
     display: grid;
     z-index: -1;
     img {
@@ -36,9 +37,10 @@ body {
         }
     }
     
-    .desktop {
-        display: none;
-    }
+}
+
+.desktop {
+    display: none;
 }
 
 header {
@@ -56,6 +58,7 @@ header {
         font-size: 15px;
     }
 }
+
 section.ratings {
     .rating {
         width: 100%;
@@ -74,7 +77,45 @@ section.ratings {
             margin-bottom: 0.8rem;
         }
         p {
-            font-weight: 500;
+            font-weight: 700;
         }
+    }
+}
+
+main {
+    margin-top: 2rem;
+}
+
+.card {
+    background-color: $clr-Dark-Magenta;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    padding: 1.5rem;
+    color: $clr-White;
+    
+
+    .personInfo {
+        display: grid;
+        grid-template-columns: 50px 1fr;
+        align-items: center;
+        gap: 1rem;
+
+        img {
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+        }
+
+        .verify {
+            color: $clr-Pink;
+        }
+    }
+
+    blockquote {
+        font-weight: 200;
+        font-size: 0.9rem;
+        margin: 1.5rem 0;
+        line-height: 1.4rem;
+        letter-spacing: 0.05rem;
     }
 }

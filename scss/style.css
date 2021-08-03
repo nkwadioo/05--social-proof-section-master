@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@200;400;500;700&display=swap");
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -9,6 +9,7 @@
 body {
   font-family: 'Spartan', sans-serif;
   min-height: 100vh;
+  position: relative;
 }
 
 .wrapper {
@@ -19,7 +20,7 @@ body {
 .background {
   width: 100%;
   position: absolute;
-  min-height: 100vh;
+  height: 100%;
   display: -ms-grid;
   display: grid;
   z-index: -1;
@@ -35,7 +36,7 @@ body {
       align-self: end;
 }
 
-.background .desktop {
+.desktop {
   display: none;
 }
 
@@ -76,6 +77,47 @@ section.ratings .rating .stars {
 }
 
 section.ratings .rating p {
-  font-weight: 500;
+  font-weight: 700;
+}
+
+main {
+  margin-top: 2rem;
+}
+
+.card {
+  background-color: #502050;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  padding: 1.5rem;
+  color: white;
+}
+
+.card .personInfo {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50px 1fr;
+      grid-template-columns: 50px 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.card .personInfo img {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+.card .personInfo .verify {
+  color: #ee68a4;
+}
+
+.card blockquote {
+  font-weight: 200;
+  font-size: 0.9rem;
+  margin: 1.5rem 0;
+  line-height: 1.4rem;
+  letter-spacing: 0.05rem;
 }
 /*# sourceMappingURL=style.css.map */
